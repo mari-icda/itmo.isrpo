@@ -60,4 +60,22 @@
 2. На основе полученных данных осуществляет расcчет периметра треугольника
 пример вызова функции `p = perimeter(3, 4, 5)`
 
+# История изменения проекта 
+- **ee364c3 add new file rectangle.py**
+коммит о добавлении нового файла `rectangle.py` 
+
+- **0b67e1a add new file triangle.py**
+коммит о добавлении нового файла `triangle.py`
+
+- **ded5816 error in file rectangle.py was correct**
+коммит об изменении ошибки в файле `rectangle.py`
+
+- **a0d5841 Added comment threads to the file : circle.py rectangle.py square.py triangle.py**
+коммит о добавлении блока коментария в файлы: `circle.py`, `rectangle.py`, `square.py`, `triangle.py`
+
+- **7d02602 (HEAD -> main) added documentation for functions from files circle.py, rectangle.py, square.py, triangle.py**
+коммит о добавлении документации по файлам  `circle.py`, `rectangle.py`, `square.py`, `triangle.py`
+
+
+
 
