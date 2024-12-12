@@ -26,4 +26,4 @@ jobs:
 
     - name: Run tests
       run: |
-        python -m unittest main/test_circle.py  # Убедитесь, что путь правильный
+        python -m unittest lab_work_4/test_circle.py  
