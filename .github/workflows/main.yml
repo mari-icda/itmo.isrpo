@@ -3,10 +3,15 @@ name: Python CI
 on:
   push:
     branches:
-      - main  
+      - main  # Указываем, что workflow будет срабатывать на ветке main
+
 jobs:
   build:
-    runs-on: ubuntu-20.04 
+    runs-on: ${{ matrix.os }}  # Используем матрицу для запуска на разных ОС
+
+    strategy:
+      matrix:
+        os: [ubuntu-20.04 , windows-latest]  # Указываем две ОС для запуска тестов
 
     steps:
     - name: Checkout code
@@ -15,16 +20,18 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.8'  
+        python-version: '3.8'  # Укажите необходимую версию Python
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-
+        # Если у вас есть requirements.txt, вы можете добавить эту строку:
+        # pip install -r requirements.txt
 
     - name: Run tests
       run: |
         python -m unittest test_circle.py
-        python -m unittest test_rectangle.py 
-        python -m unittest test_square.py 
-        python -m unittest test_triangle.py  
+        python -m unittest test_rectangle.py
+        python -m unittest test_square.py
+        python -m unittest test_triangle.py
+
