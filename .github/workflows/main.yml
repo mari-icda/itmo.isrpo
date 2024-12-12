@@ -27,4 +27,4 @@ jobs:
     
     - name: Run tests
       run: |
-        python -m unittest main/circle_test.py
+        python -m unittest main/teast_circle.py
