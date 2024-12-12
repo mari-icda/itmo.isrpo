@@ -3,15 +3,15 @@ name: Python CI
 on:
   push:
     branches:
-      - main  # Указываем, что workflow будет срабатывать на ветке main
+      - main 
 
 jobs:
   build:
-    runs-on: ${{ matrix.os }}  # Используем матрицу для запуска на разных ОС
+    runs-on: ${{ matrix.os }}  
 
     strategy:
       matrix:
-        os: [ubuntu-20.04 , windows-latest]  # Указываем две ОС для запуска тестов
+        os: [ubuntu-20.04 , windows-latest]  
 
     steps:
     - name: Checkout code
@@ -20,7 +20,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.8'  # Укажите необходимую версию Python
+        python-version: '3.8'  
 
     - name: Install dependencies
       run: |
