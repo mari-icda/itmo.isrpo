@@ -3,7 +3,7 @@ name: Python CI
 on:
   push:
     branches:
-      - main  
+      - main
 
 jobs:
   build:
@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest]
+        os: [ubuntu-20.04, windows-latest]  
 
     steps:
     - name: Checkout code
@@ -26,8 +26,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        # Если у вас есть файл requirements.txt, добавьте следующую строку:
-        # pip install -r requirements.txt
+        pip install -r requirements.txt 
     
     - name: Run tests
       run: |
